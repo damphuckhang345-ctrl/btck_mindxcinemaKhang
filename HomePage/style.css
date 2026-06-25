@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    position:absolute;
+    width:100%;
+    z-index:10;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+}
+
+.login-btn{
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    background:#6366f1;
+    color:white;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+
+    padding:0 8%;
+
+    background:
+    linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.7)),
+    url("background.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:600px;
+}
+
+.badge{
+    background:#ef4444;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin:20px 0;
+}
+
+.hero-content p{
+    color:#d1d5db;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.watch-btn{
+    background:#6366f1;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.info-btn{
+    background:transparent;
+    color:white;
+    border:1px solid white;
+    padding:15px 30px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+/* POSTER */
+
+.hero-image img{
+    width:300px;
+    border-radius:20px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.5);
+}
+
+/* MOVIES */
+
+.movies{
+    padding:80px 8%;
+}
+
+.movies h2{
+    margin-bottom:30px;
+}
+
+.movie-list{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.movie-card{
+    width:250px;
+    background:#1e293b;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.movie-card:hover{
+    transform:translateY(-10px);
+}
+
+.movie-card img{
+    width:100%;
+    display:block;
+}
+
+.movie-card h3{
+    padding:15px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding-top:120px;
+    }
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    .hero-image img{
+        width:220px;
+        margin-top:30px;
+    }
+
+    nav{
+        display:none;
+    }
+}
