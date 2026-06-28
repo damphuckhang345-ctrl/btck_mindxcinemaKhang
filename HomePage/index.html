@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinema Home</title>
+    <title>CinemaX</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,12 +19,21 @@
             <a href="#">Liên Hệ</a>
         </nav>
 
-        <button class="login-btn">Đăng Nhập</button>
+        <button
+    id="logoutBtn"
+    class="login-btn"
+>
+    Đăng xuất
+</button>
+
+<script src="./home.js"></script>
+
     </header>
 
     <section class="hero">
 
         <div class="hero-content">
+
             <span class="badge">🔥 PHIM HOT 2025</span>
 
             <h1>SPACE CADET</h1>
@@ -34,41 +44,119 @@
             </p>
 
             <div class="hero-buttons">
-                <button class="watch-btn">▶ Xem Ngay</button>
-                <button class="info-btn">ℹ Chi Tiết</button>
-            </div>
+
+    <a href="watch.html" class="watch-btn">
+        ▶ Xem Ngay
+    </a>
+
+    <a href="../DetailMovie/detail.html" class="info-btn">
+        ℹ Chi Tiết
+    </a>
+
+</div>
+
         </div>
 
         <div class="hero-image">
-            <img src="poster.jpg" alt="Movie Poster">
+            <img src="https://picsum.photos/400/600" alt="">
         </div>
 
     </section>
 
     <section class="movies">
 
-        <h2>Phim Nổi Bật</h2>
+        <h2>🔥 Phim Nổi Bật</h2>
 
         <div class="movie-list">
 
-            <div class="movie-card">
+            <a href = '../DetailMovie/detail.html' class="movie-card">
                 <img src="https://picsum.photos/250/350?1">
-                <h3>Avatar 3</h3>
-            </div>
+                <h3>Avengers: Endgame</h3>
+            </a>
 
             <div class="movie-card">
                 <img src="https://picsum.photos/250/350?2">
-                <h3>Dune 2</h3>
+                <h3>Dune Part Two</h3>
             </div>
 
             <div class="movie-card">
                 <img src="https://picsum.photos/250/350?3">
-                <h3>Deadpool</h3>
+                <h3>Deadpool & Wolverine</h3>
             </div>
 
             <div class="movie-card">
                 <img src="https://picsum.photos/250/350?4">
                 <h3>Joker 2</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?5">
+                <h3>Inside Out 2</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?6">
+                <h3>Furiosa</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?7">
+                <h3>Mission Impossible</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?8">
+                <h3>The Batman</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="movies">
+
+        <h2>🔥 Phim Thịnh Hành</h2>
+
+        <div class="movie-list">
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?11">
+                <h3>Oppenheimer</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?12">
+                <h3>Interstellar</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?13">
+                <h3>Top Gun Maverick</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?14">
+                <h3>John Wick 4</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?15">
+                <h3>Gladiator 2</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?16">
+                <h3>Fast X</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?17">
+                <h3>Matrix</h3>
+            </div>
+
+            <div class="movie-card">
+                <img src="https://picsum.photos/250/350?18">
+                <h3>Black Panther</h3>
             </div>
 
         </div>
@@ -77,3 +165,4 @@
 
 </body>
 </html>
+

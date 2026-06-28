@@ -1,36 +1,55 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./login.css">
-<title>Đăng Nhập</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - CinemaX</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
 
-<div class="container">
-    <h2>Đăng Nhập</h2>
+    <div class="overlay"></div>
 
-    <form>
-        <div class="input-group">
-            <label>Email</label>
-            <input type="email" placeholder="Nhập email">
+    <div class="container">
+
+        
+        </a>
+
+        <div class="logo">
+            🎬 CinemaX
         </div>
 
-        <div class="input-group">
-            <label>Mật khẩu</label>
-            <input type="password" placeholder="Nhập mật khẩu">
-        </div>
+        <h2>Đăng Nhập</h2>
 
-        <button type="submit">Đăng Nhập</button>
+<form id="loginForm">
 
-        <div class="link">
-            Chưa có tài khoản?
-            <a href="../register/register.html">Đăng ký</a>
-        </div>
-    </form>
-</div>
+    <div class="input-group">
+        <label>Email</label>
+        <input
+            id="email"
+            type="email"
+            placeholder="Nhập email"
+        >
+    </div>
 
+    <div class="input-group">
+        <label>Mật khẩu</label>
+        <input
+            id="password"
+            type="password"
+            placeholder="Nhập mật khẩu"
+        >
+    </div>
+
+    <button type="submit">
+        Đăng Nhập
+    </button>
+
+</form>
+
+    </div>
+<script src="./login.js"></script>
 </body>
 </html>
+

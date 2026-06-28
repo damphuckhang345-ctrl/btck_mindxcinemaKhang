@@ -12,35 +12,50 @@
 <div class="container">
     <h2>Đăng Ký Tài Khoản</h2>
 
-    <form>
-        <div class="input-group">
-            <label>Họ và tên</label>
-            <input type="text" placeholder="Nhập họ tên">
-        </div>
+    <form id="registerForm">
 
-        <div class="input-group">
-            <label>Email</label>
-            <input type="email" placeholder="Nhập email">
-        </div>
+    <div class="input-group">
+        <label>Họ và tên</label>
+        <input
+            id="fullName"
+            type="text"
+            placeholder="Nhập họ tên"
+        >
+    </div>
 
-        <div class="input-group">
-            <label>Mật khẩu</label>
-            <input type="password" placeholder="Tạo mật khẩu">
-        </div>
+    <div class="input-group">
+        <label>Email</label>
+        <input
+            id="email"
+            type="email"
+            placeholder="Nhập email"
+        >
+    </div>
 
-        <div class="input-group">
-            <label>Xác nhận mật khẩu</label>
-            <input type="password" placeholder="Nhập lại mật khẩu">
-        </div>
+    <div class="input-group">
+        <label>Mật khẩu</label>
+        <input
+            id="password"
+            type="password"
+            placeholder="Tạo mật khẩu"
+        >
+    </div>
 
-        <button type="submit">Đăng Ký</button>
+    <div class="input-group">
+        <label>Xác nhận mật khẩu</label>
+        <input
+            id="confirmPassword"
+            type="password"
+            placeholder="Nhập lại mật khẩu"
+        >
+    </div>
 
-        <div class="link">
-            Đã có tài khoản?
-            <a href="../login/login.html">Đăng nhập</a>
-        </div>
-    </form>
+    <button type="submit">
+        Đăng Ký
+    </button>
+
+</form>
 </div>
-
+<script src="./register.js"></script>
 </body>
 </html>
