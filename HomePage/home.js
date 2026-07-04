@@ -38,25 +38,23 @@ const featuredList = document.getElementById("featured-list");
 const trendingList = document.getElementById("trending-list");
 
 // 8 phim đầu
-movies.slice(0,8).forEach(movie => {
-
-    featuredList.innerHTML += `
+featuredList.innerHTML = movies
+    .slice(0, 8)
+    .map(movie => `
         <a href="../DetailMovie/detail.html?id=${movie.id}" class="movie-card">
-            <img src="${movie.poster}">
+            <img src="${movie.poster}" alt="${movie.title}">
             <h3>${movie.title}</h3>
         </a>
-    `;
-
-});
+    `)
+    .join("");
 
 // 8 phim sau
-movies.slice(8,16).forEach(movie => {
-
-    trendingList.innerHTML += `
+featuredList.innerHTML = movies
+    .slice(0, 8)
+    .map(movie => `
         <a href="../DetailMovie/detail.html?id=${movie.id}" class="movie-card">
-            <img src="${movie.poster}">
+            <img src="${movie.poster}" alt="${movie.title}">
             <h3>${movie.title}</h3>
         </a>
-    `;
-
-});
+    `)
+    .join("");
