@@ -32,7 +32,7 @@ if(isLogin !== "true"){
 
 }
 
-console.log(movies);
+console.log(window.movies);
 
 const featuredList = document.getElementById("featured-list");
 const trendingList = document.getElementById("trending-list");
