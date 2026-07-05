@@ -3,100 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CinemaX</title>
+    <title>Khang Cinema</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
 
-    <header>
-        <div class="logo">🎬 CinemaX</div>
+    <header class="site-header">
+        <a class="logo" href="#top">Khang Cinema</a>
 
-        <nav>
-            <a href="#top">Trang Chủ</a>
-            <a href="#featured-movies">Phim nổi bật</a>
-            <a href="#trending-movies">Phim thịnh hành</a>
-            <a href="#footer">Liên Hệ</a>
+        <nav class="main-nav">
+            <a href="#featured-movies">Nổi bật</a>
+            <a href="#trending-movies">Thịnh hành</a>
+            <a href="#footer">Liên hệ</a>
         </nav>
 
-        <button
-    id="logoutBtn"
-    class="login-btn"
->
-    Đăng xuất
-</button>
-
-<script src="../data/movies.js"></script>
-<script src="./home.js"></script>
-
+        <button id="logoutBtn" class="auth-btn" type="button">Đăng nhập</button>
     </header>
 
-    <section class="hero">
+    <main>
+        <!-- TÍNH NĂNG MỚI: Hero này được JS gắn dữ liệu từ dữ liệu giả lập của phim đầu tiên. -->
+        <section class="hero" aria-labelledby="heroTitle">
+            <div class="hero-copy">
+                <p class="eyebrow">Đêm phim MindX</p>
+                <h1 id="heroTitle">Khang Cinema</h1>
+                <p id="heroDescription" class="hero-description">
+                    Đang tải danh sách phim...
+                </p>
 
-        <div class="hero-content">
+                <!-- TÍNH NĂNG MỚI: form tìm kiếm để lọc phim theo dữ liệu giả lập, không dùng máy chủ thật. -->
+                <form id="searchForm" class="search-box">
+                    <input
+                        id="searchInput"
+                        type="search"
+                        placeholder="Tìm phim, đạo diễn, thể loại..."
+                        autocomplete="off"
+                    >
+                    <button type="submit">Tìm</button>
+                </form>
+            </div>
 
-            
+            <a id="heroLink" class="hero-poster" href="#featured-movies" aria-label="Mở phim nổi bật">
+                <img id="heroPoster" src="https://picsum.photos/seed/cinema-hero/500/750" alt="Poster phim nổi bật">
+                <span id="heroMeta" class="hero-meta">2024 / Cinema</span>
+            </a>
+        </section>
 
-            <h1>KHANG CINEMA</h1>
+        <section class="quick-stats" aria-label="Thống kê phim">
+            <div>
+                <strong id="totalMovies">0</strong>
+                <span>Phim</span>
+            </div>
+            <div>
+                <strong id="totalGenres">0</strong>
+                <span>Thể loại</span>
+            </div>
+            <div>
+                <strong id="latestYear">2024</strong>
+                <span>Mới nhất</span>
+            </div>
+        </section>
 
-            <p>
-                
-            </p>
+        <!-- TÍNH NĂNG MỚI: khu vực này chỉ hiện khi người dùng nhập từ khóa tìm kiếm. -->
+        <section id="search-section" class="movies search-results" hidden>
+            <div class="section-heading">
+                <div>
+                    <p class="section-kicker">Kết quả</p>
+                    <h2>Tìm kiếm phim</h2>
+                </div>
+                <p id="searchCount" class="section-note">0 phim</p>
+            </div>
+            <div id="search-list" class="movie-list"></div>
+        </section>
 
-            <div class="hero-buttons">
+        <section class="movies" id="featured-movies">
+            <div class="section-heading">
+                <div>
+                    <p class="section-kicker">Đang chiếu</p>
+                    <h2>Phim nổi bật</h2>
+                </div>
+                <a class="section-link" href="#top">Lên đầu trang</a>
+            </div>
+            <div class="movie-list" id="featured-list"></div>
+        </section>
 
-    <a href="#featured-movies" class="watch-btn">
-        ▶ Xem Ngay
-    </a>
+        <section class="movies" id="trending-movies">
+            <div class="section-heading">
+                <div>
+                    <p class="section-kicker">Gợi ý</p>
+                    <h2>Phim thịnh hành</h2>
+                </div>
+            </div>
+            <div class="movie-list" id="trending-list"></div>
+        </section>
+    </main>
 
-    
-
-</div>
-
+    <footer class="contact" id="footer">
+        <div>
+            <p class="section-kicker">Khang Cinema</p>
+            <h2>Liên hệ</h2>
         </div>
-
-   
-
-    </section>
-
-    <section class="movies" id="featured-movies">
-
-        <h2>🔥 Phim Nổi Bật</h2>
-
-        <div class="movie-list" id="featured-list"></div>
-
-    </section>
-
-    <section class="movies" id="trending-movies">
-
-        <h2>🔥 Phim Thịnh Hành</h2>
-
-        <div class="movie-list" id="trending-list"></div>
-
-    </section>
-
-   <section class="contact" id="footer">
-
-    <div class="contact-info">
-
-        <h2>📞 Thông Tin Liên Hệ</h2>
-
-        <p>📍 53 PVB, P.15, Q.TB, TP.HCM</p>
-
-        <p>📞 +84 908 562 750</p>
-
-        <p>✉️ contact.cinemax@gmail.com</p>
-
-        <p>🌐 www.cinemax.com</p>
-
-        <div class="social">
-
-
+        <div class="contact-grid">
+            <p>Địa chỉ: 53 PVB, P.15, Q.TB, TP.HCM</p>
+            <p>Hotline: +84 908 562 750</p>
+            <p>Email: contact.cinemax@gmail.com</p>
+            <p>Website: www.cinemax.com</p>
         </div>
+    </footer>
 
+    <!-- TÍNH NĂNG MỚI: lớp phủ đang tải có vòng xoay, JS sẽ bật/tắt khi giả lập lấy dữ liệu. -->
+    <div id="loadingOverlay" class="loading-overlay" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <p id="loadingText">Đang tải dữ liệu...</p>
     </div>
 
-
-</section>
-
+    <script src="../data/movie.js"></script>
+    <script src="./home.js"></script>
 </body>
 </html>

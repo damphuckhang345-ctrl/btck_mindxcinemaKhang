@@ -3,89 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chi Tiết Phim</title>
+    <title>Chi tiết phim - Khang Cinema</title>
     <link rel="stylesheet" href="./detail.css">
 </head>
 <body>
 
-    <div class="banner">
-        <div class="overlay"></div>
-    </div>
+    <header class="detail-header">
+        <a class="brand" href="../HomePage/index.html">Khang Cinema</a>
+        <a class="back-link" href="../HomePage/index.html">Về trang chủ</a>
+    </header>
 
-    <div class="container">
-
-        <div class="movie-header">
-            <div class="poster">
-                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500" alt="Poster phim">
+    <!-- TÍNH NĂNG MỚI: detailPage ban đầu bị ẩn, JS chỉ hiện sau khi giả lập lấy dữ liệu xong. -->
+    <main id="detailPage" hidden>
+        <section id="detailHero" class="detail-hero">
+            <div class="detail-poster">
+                <img id="moviePoster" src="https://picsum.photos/seed/movie-detail/500/750" alt="Poster phim">
             </div>
 
-            <div class="movie-info">
-                <h1>Avengers: Endgame</h1>
-                <div class="meta">
-                    <span>2019</span>
-                    <span>•</span>
-                    <span>181 phút</span>
-                    <span>•</span>
-                    <span>Hành động, Khoa học viễn tưởng</span>
-                </div>
+            <div class="detail-info">
+                <p id="movieGenre" class="eyebrow">Cinema</p>
+                <h1 id="movieTitle">Đang tải phim...</h1>
+                <div id="movieMeta" class="meta"></div>
+                <p id="movieDescription" class="description"></p>
 
-                <div class="rating">
-                    ⭐ 8.4/10
-                </div>
-
-                <p class="description">
-                    Sau những sự kiện tàn khốc của Infinity War, các Avengers còn sống sót
-                    phải hợp sức một lần cuối cùng để đảo ngược hậu quả do Thanos gây ra
-                    và khôi phục lại vũ trụ.
-                </p>
-
-                <div class="buttons">
-                    <button class="watch-btn">▶ Xem ngay</button>
-                    <button class="trailer-btn">🎬 Trailer</button>
-                </div>
-            </div>
-        </div>
-
-        <section class="section">
-            <h2>Nội dung phim</h2>
-            <p>
-                Avengers: Endgame là phần kết hoành tráng của Infinity Saga,
-                nơi những siêu anh hùng mạnh nhất Trái Đất đối mặt với thử thách
-                lớn nhất trong lịch sử của họ.
-            </p>
-        </section>
-
-        <section class="section">
-            <h2>Diễn viên</h2>
-
-            <div class="cast-list">
-                <div class="cast-card">
-                    <img src="https://i.pravatar.cc/150?img=11" alt="">
-                    <h4>Robert Downey Jr.</h4>
-                    <span>Iron Man</span>
-                </div>
-
-                <div class="cast-card">
-                    <img src="https://i.pravatar.cc/150?img=12" alt="">
-                    <h4>Chris Evans</h4>
-                    <span>Captain America</span>
-                </div>
-
-                <div class="cast-card">
-                    <img src="https://i.pravatar.cc/150?img=13" alt="">
-                    <h4>Scarlett Johansson</h4>
-                    <span>Black Widow</span>
-                </div>
-
-                <div class="cast-card">
-                    <img src="https://i.pravatar.cc/150?img=14" alt="">
-                    <h4>Chris Hemsworth</h4>
-                    <span>Thor</span>
+                <div class="detail-actions">
+                    <button id="watchVideoBtn" class="primary-btn" type="button">Xem video</button>
+                    <a class="secondary-btn" href="../HomePage/index.html">Danh sách phim</a>
                 </div>
             </div>
         </section>
 
+        <!-- TÍNH NĂNG MỚI: trình phát video lấy link video từ dữ liệu giả lập của từng phim. -->
+        <section id="watch" class="section video-section">
+            <div class="section-heading">
+                <p class="eyebrow">Trình phát</p>
+                <h2>Video</h2>
+            </div>
+
+            <div class="video-frame">
+                <video id="movieVideo" controls playsinline preload="metadata">
+                    <source id="movieSource" src="" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ video.
+                </video>
+            </div>
+        </section>
+
+        <section class="section two-column">
+            <div>
+                <p class="eyebrow">Nội dung</p>
+                <h2>Tóm tắt phim</h2>
+                <p id="movieLongDescription" class="section-text"></p>
+            </div>
+
+            <div>
+                <p class="eyebrow">Đạo diễn</p>
+                <h2 id="movieDirector">Đang tải...</h2>
+                <p id="movieRating" class="rating-box"></p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-heading">
+                <p class="eyebrow">Diễn viên</p>
+                <h2>Dàn diễn viên</h2>
+            </div>
+            <div id="castList" class="cast-list"></div>
+        </section>
+    </main>
+
+    <section id="notFound" class="not-found" hidden>
+        <h1>Không tìm thấy phim</h1>
+        <p>Đường dẫn hiện tại không có phim tương ứng trong dữ liệu giả lập.</p>
+        <a class="primary-btn" href="../HomePage/index.html">Về trang chủ</a>
+    </section>
+
+    <!-- TÍNH NĂNG MỚI: vòng xoay tải giả lập cho trang chi tiết. -->
+    <div id="loadingOverlay" class="loading-overlay" hidden>
+        <div class="spinner" aria-hidden="true"></div>
+        <p id="loadingText">Đang tải chi tiết phim...</p>
     </div>
 
+    <script src="../data/movie.js"></script>
+    <script src="./detail.js"></script>
 </body>
 </html>

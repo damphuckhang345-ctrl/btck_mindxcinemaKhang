@@ -19,7 +19,7 @@ body{
     background-position:center;
 }
 
-/* KHUNG ĐĂNG KÝ */
+/* Khung đăng ký */
 
 .container{
 
@@ -51,7 +51,7 @@ h2{
 
 }
 
-/* INPUT */
+/* Ô nhập liệu */
 
 .input-group{
 
@@ -103,7 +103,7 @@ input:focus{
 
 }
 
-/* BUTTON */
+/* Nút bấm */
 
 button{
 
@@ -137,7 +137,7 @@ button:hover{
 
 }
 
-/* LINK */
+/* Liên kết */
 
 .link{
 
@@ -165,7 +165,7 @@ button:hover{
 
 }
 
-/* RESPONSIVE */
+/* Tương thích màn hình nhỏ */
 
 @media(max-width:500px){
 

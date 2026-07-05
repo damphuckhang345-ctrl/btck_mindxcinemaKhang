@@ -1,3 +1,8 @@
+// MOCK DATA CHUNG CHO TOÀN BỘ WEBSITE
+// File này được nạp trực tiếp bằng thẻ <script>, vì vậy không dùng import/export.
+// TÍNH NĂNG MỚI: mỗi phim có thêm rating, backdrop, video và cast để trang chủ
+// hiển thị đẹp hơn, còn trang chi tiết có dữ liệu đầy đủ và xem được video.
+// Khi có máy chủ thật, bạn chỉ cần thay mảng movies này bằng dữ liệu API trả về.
 const movies = [
     {
         id: 1,
@@ -6,8 +11,12 @@ const movies = [
         duration: "181 phút",
         genre: "Hành động, Phiêu lưu",
         director: "Anthony Russo, Joe Russo",
-        poster: "https://picsum.photos/250/350?1",
-        description: "Sau khi Thanos xóa sổ một nửa sự sống trong vũ trụ, các Avengers còn sống sót tập hợp để thực hiện nhiệm vụ cuối cùng nhằm đảo ngược mọi thứ."
+        rating: "8.4/10",
+        poster: "https://picsum.photos/seed/avengers-endgame/500/750",
+        backdrop: "https://picsum.photos/seed/avengers-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Sau khi Thanos xóa sổ một nửa sự sống trong vũ trụ, các Avengers còn sống sót tập hợp để thực hiện nhiệm vụ cuối cùng nhằm đảo ngược mọi thứ.",
+        cast: ["Robert Downey Jr.", "Chris Evans", "Scarlett Johansson", "Chris Hemsworth"]
     },
     {
         id: 2,
@@ -16,8 +25,12 @@ const movies = [
         duration: "166 phút",
         genre: "Khoa học viễn tưởng",
         director: "Denis Villeneuve",
-        poster: "https://picsum.photos/250/350?2",
-        description: "Paul Atreides hợp tác với người Fremen để trả thù những kẻ đã hủy hoại gia đình mình."
+        rating: "8.5/10",
+        poster: "https://picsum.photos/seed/dune-two/500/750",
+        backdrop: "https://picsum.photos/seed/dune-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Paul Atreides hợp tác với người Fremen để trả thù những kẻ đã hủy hoại gia đình mình và đối mặt với định mệnh trên hành tinh Arrakis.",
+        cast: ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson", "Javier Bardem"]
     },
     {
         id: 3,
@@ -26,8 +39,12 @@ const movies = [
         duration: "128 phút",
         genre: "Hành động, Hài",
         director: "Shawn Levy",
-        poster: "https://picsum.photos/250/350?3",
-        description: "Deadpool và Wolverine hợp tác để bảo vệ đa vũ trụ khỏi mối đe dọa mới."
+        rating: "7.8/10",
+        poster: "https://picsum.photos/seed/deadpool-wolverine/500/750",
+        backdrop: "https://picsum.photos/seed/deadpool-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Deadpool và Wolverine bất đắc dĩ hợp tác để bảo vệ đa vũ trụ khỏi một mối đe dọa mới.",
+        cast: ["Ryan Reynolds", "Hugh Jackman", "Emma Corrin", "Matthew Macfadyen"]
     },
     {
         id: 4,
@@ -36,18 +53,26 @@ const movies = [
         duration: "138 phút",
         genre: "Tâm lý, Tội phạm",
         director: "Todd Phillips",
-        poster: "https://picsum.photos/250/350?4",
-        description: "Arthur Fleck tiếp tục hành trình trở thành Joker cùng Harley Quinn."
+        rating: "5.3/10",
+        poster: "https://picsum.photos/seed/joker-two/500/750",
+        backdrop: "https://picsum.photos/seed/joker-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Arthur Fleck tiếp tục hành trình trở thành Joker cùng Harley Quinn trong một câu chuyện đầy kịch tính.",
+        cast: ["Joaquin Phoenix", "Lady Gaga", "Brendan Gleeson", "Zazie Beetz"]
     },
     {
         id: 5,
         title: "Inside Out 2",
         year: 2024,
         duration: "96 phút",
-        genre: "Hoạt hình",
+        genre: "Hoạt hình, Gia đình",
         director: "Kelsey Mann",
-        poster: "https://picsum.photos/250/350?5",
-        description: "Riley bước vào tuổi dậy thì với nhiều cảm xúc mới xuất hiện."
+        rating: "7.6/10",
+        poster: "https://picsum.photos/seed/inside-out-two/500/750",
+        backdrop: "https://picsum.photos/seed/inside-out-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Riley bước vào tuổi dậy thì với nhiều cảm xúc mới xuất hiện, khiến mọi thứ trong tâm trí cô trở nên hỗn loạn.",
+        cast: ["Amy Poehler", "Maya Hawke", "Kensington Tallman", "Liza Lapira"]
     },
     {
         id: 6,
@@ -56,38 +81,54 @@ const movies = [
         duration: "148 phút",
         genre: "Hành động",
         director: "George Miller",
-        poster: "https://picsum.photos/250/350?6",
-        description: "Câu chuyện nguồn gốc của chiến binh Furiosa trước Mad Max: Fury Road."
+        rating: "7.5/10",
+        poster: "https://picsum.photos/seed/furiosa/500/750",
+        backdrop: "https://picsum.photos/seed/furiosa-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Câu chuyện nguồn gốc của chiến binh Furiosa trước Mad Max: Fury Road, nơi cô tìm cách sinh tồn giữa vùng đất hoang tàn.",
+        cast: ["Anya Taylor-Joy", "Chris Hemsworth", "Alyla Browne", "Tom Burke"]
     },
     {
         id: 7,
         title: "Mission: Impossible",
         year: 2023,
         duration: "163 phút",
-        genre: "Hành động",
+        genre: "Hành động, Điệp viên",
         director: "Christopher McQuarrie",
-        poster: "https://picsum.photos/250/350?7",
-        description: "Ethan Hunt tiếp tục nhiệm vụ ngăn chặn một AI nguy hiểm."
+        rating: "7.7/10",
+        poster: "https://picsum.photos/seed/mission-impossible/500/750",
+        backdrop: "https://picsum.photos/seed/mission-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Ethan Hunt tiếp tục nhiệm vụ ngăn chặn một AI nguy hiểm trước khi nó rơi vào tay các thế lực xấu.",
+        cast: ["Tom Cruise", "Hayley Atwell", "Ving Rhames", "Simon Pegg"]
     },
     {
         id: 8,
         title: "The Batman",
         year: 2022,
         duration: "176 phút",
-        genre: "Hành động",
+        genre: "Hành động, Tội phạm",
         director: "Matt Reeves",
-        poster: "https://picsum.photos/250/350?8",
-        description: "Batman điều tra chuỗi án mạng bí ẩn do Riddler gây ra."
+        rating: "7.8/10",
+        poster: "https://picsum.photos/seed/the-batman/500/750",
+        backdrop: "https://picsum.photos/seed/batman-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Batman điều tra chuỗi án mạng bí ẩn do Riddler gây ra và phát hiện những bí mật đen tối của Gotham.",
+        cast: ["Robert Pattinson", "Zoë Kravitz", "Paul Dano", "Jeffrey Wright"]
     },
     {
         id: 9,
         title: "Oppenheimer",
         year: 2023,
         duration: "180 phút",
-        genre: "Tiểu sử",
+        genre: "Tiểu sử, Chính kịch",
         director: "Christopher Nolan",
-        poster: "https://picsum.photos/250/350?11",
-        description: "Cuộc đời của J. Robert Oppenheimer - cha đẻ của bom nguyên tử."
+        rating: "8.3/10",
+        poster: "https://picsum.photos/seed/oppenheimer/500/750",
+        backdrop: "https://picsum.photos/seed/oppenheimer-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Bộ phim kể về cuộc đời của J. Robert Oppenheimer, cha đẻ của bom nguyên tử và những hệ quả sau Dự án Manhattan.",
+        cast: ["Cillian Murphy", "Emily Blunt", "Matt Damon", "Robert Downey Jr."]
     },
     {
         id: 10,
@@ -96,8 +137,12 @@ const movies = [
         duration: "169 phút",
         genre: "Khoa học viễn tưởng",
         director: "Christopher Nolan",
-        poster: "https://picsum.photos/250/350?12",
-        description: "Nhóm phi hành gia tìm kiếm hành tinh mới để cứu nhân loại."
+        rating: "8.7/10",
+        poster: "https://picsum.photos/seed/interstellar/500/750",
+        backdrop: "https://picsum.photos/seed/interstellar-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Nhóm phi hành gia tìm kiếm hành tinh mới để cứu nhân loại khỏi nguy cơ diệt vong.",
+        cast: ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain", "Michael Caine"]
     },
     {
         id: 11,
@@ -106,8 +151,12 @@ const movies = [
         duration: "131 phút",
         genre: "Hành động",
         director: "Joseph Kosinski",
-        poster: "https://picsum.photos/250/350?13",
-        description: "Maverick quay lại đào tạo thế hệ phi công trẻ cho nhiệm vụ nguy hiểm."
+        rating: "8.2/10",
+        poster: "https://picsum.photos/seed/top-gun-maverick/500/750",
+        backdrop: "https://picsum.photos/seed/topgun-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Maverick quay lại đào tạo thế hệ phi công trẻ cho một nhiệm vụ nguy hiểm và đầy áp lực.",
+        cast: ["Tom Cruise", "Miles Teller", "Jennifer Connelly", "Glen Powell"]
     },
     {
         id: 12,
@@ -116,18 +165,26 @@ const movies = [
         duration: "169 phút",
         genre: "Hành động",
         director: "Chad Stahelski",
-        poster: "https://picsum.photos/250/350?14",
-        description: "John Wick đối đầu với High Table trong trận chiến cuối cùng."
+        rating: "7.7/10",
+        poster: "https://picsum.photos/seed/john-wick-four/500/750",
+        backdrop: "https://picsum.photos/seed/johnwick-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "John Wick đối đầu với High Table trong trận chiến quyết định để giành lại tự do.",
+        cast: ["Keanu Reeves", "Donnie Yen", "Bill Skarsgård", "Laurence Fishburne"]
     },
     {
         id: 13,
         title: "Gladiator II",
         year: 2024,
         duration: "148 phút",
-        genre: "Sử thi",
+        genre: "Sử thi, Hành động",
         director: "Ridley Scott",
-        poster: "https://picsum.photos/250/350?15",
-        description: "Lucius tiếp bước Maximus trong Đế chế La Mã."
+        rating: "6.8/10",
+        poster: "https://picsum.photos/seed/gladiator-two/500/750",
+        backdrop: "https://picsum.photos/seed/gladiator-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Lucius tiếp bước Maximus trong Đế chế La Mã và phải chiến đấu để thay đổi vận mệnh của mình.",
+        cast: ["Paul Mescal", "Pedro Pascal", "Denzel Washington", "Connie Nielsen"]
     },
     {
         id: 14,
@@ -136,8 +193,12 @@ const movies = [
         duration: "141 phút",
         genre: "Hành động",
         director: "Louis Leterrier",
-        poster: "https://picsum.photos/250/350?16",
-        description: "Dom Toretto đối đầu với Dante trong cuộc chiến sinh tử."
+        rating: "5.8/10",
+        poster: "https://picsum.photos/seed/fast-x/500/750",
+        backdrop: "https://picsum.photos/seed/fastx-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Dom Toretto đối đầu với Dante trong cuộc chiến sinh tử để bảo vệ gia đình.",
+        cast: ["Vin Diesel", "Michelle Rodriguez", "Jason Momoa", "Tyrese Gibson"]
     },
     {
         id: 15,
@@ -146,8 +207,12 @@ const movies = [
         duration: "136 phút",
         genre: "Khoa học viễn tưởng",
         director: "The Wachowskis",
-        poster: "https://picsum.photos/250/350?17",
-        description: "Neo phát hiện thế giới mình sống chỉ là một mô phỏng."
+        rating: "8.7/10",
+        poster: "https://picsum.photos/seed/the-matrix/500/750",
+        backdrop: "https://picsum.photos/seed/matrix-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "Neo phát hiện thế giới mình đang sống chỉ là một mô phỏng và tham gia cuộc chiến giải phóng nhân loại.",
+        cast: ["Keanu Reeves", "Carrie-Anne Moss", "Laurence Fishburne", "Hugo Weaving"]
     },
     {
         id: 16,
@@ -156,9 +221,14 @@ const movies = [
         duration: "134 phút",
         genre: "Siêu anh hùng",
         director: "Ryan Coogler",
-        poster: "https://picsum.photos/250/350?18",
-        description: "T'Challa trở về Wakanda để trở thành vị vua mới và bảo vệ đất nước."
+        rating: "7.3/10",
+        poster: "https://picsum.photos/seed/black-panther/500/750",
+        backdrop: "https://picsum.photos/seed/blackpanther-backdrop/1600/900",
+        video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+        description: "T'Challa trở về Wakanda để trở thành vị vua mới và bảo vệ đất nước trước các thế lực muốn chiếm Vibranium.",
+        cast: ["Chadwick Boseman", "Michael B. Jordan", "Lupita Nyong'o", "Danai Gurira"]
     }
 ];
 
+// Gán vào window để các file JS khác đọc được sau khi file mock này được load.
 window.movies = movies;

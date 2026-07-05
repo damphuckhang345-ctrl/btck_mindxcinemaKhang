@@ -1,66 +1,64 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./register.css">
-<title>Đăng Ký</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./register.css">
+    <title>Đăng ký - Khang Cinema</title>
 </head>
 <body>
 
-<div class="container">
-    <h2>Đăng Ký Tài Khoản</h2>
+    <div class="container">
+        <h2>Đăng ký tài khoản</h2>
 
-    <form id="registerForm">
+        <form id="registerForm">
+            <div class="input-group">
+                <label>Họ và tên</label>
+                <input
+                    id="fullName"
+                    type="text"
+                    placeholder="Nhập họ tên"
+                >
+            </div>
 
-    <div class="input-group">
-        <label>Họ và tên</label>
-        <input
-            id="fullName"
-            type="text"
-            placeholder="Nhập họ tên"
-        >
+            <div class="input-group">
+                <label>Email</label>
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Nhập email"
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Mật khẩu</label>
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Tạo mật khẩu"
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Xác nhận mật khẩu</label>
+                <input
+                    id="confirmPassword"
+                    type="password"
+                    placeholder="Nhập lại mật khẩu"
+                >
+            </div>
+
+            <button type="submit">
+                Đăng ký
+            </button>
+
+            <div class="login-link">
+                Đã có tài khoản?
+                <a href="../login/login.html">Đăng nhập</a>
+            </div>
+        </form>
     </div>
 
-    <div class="input-group">
-        <label>Email</label>
-        <input
-            id="email"
-            type="email"
-            placeholder="Nhập email"
-        >
-    </div>
-
-    <div class="input-group">
-        <label>Mật khẩu</label>
-        <input
-            id="password"
-            type="password"
-            placeholder="Tạo mật khẩu"
-        >
-    </div>
-
-    <div class="input-group">
-        <label>Xác nhận mật khẩu</label>
-        <input
-            id="confirmPassword"
-            type="password"
-            placeholder="Nhập lại mật khẩu"
-        >
-    </div>
-
-    <button type="submit">
-        Đăng Ký
-    </button>
-
-<div class="login-link">
-    Đã có tài khoản?
-    <a href="../login/login.html">Đăng nhập</a>
-</div>
-
-</form>
-</div>
-<script src="./register.js"></script>
+    <script src="./register.js"></script>
 </body>
 </html>
