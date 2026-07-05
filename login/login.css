@@ -184,3 +184,22 @@ button:hover{
 
 }
 
+/* Chưa có tài khoản */
+.register-link{
+    margin-top:20px;
+    text-align:center;
+    color:#ccc;
+    font-size:15px;
+}
+
+.register-link a{
+    color:#e50914;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.register-link a:hover{
+    color:#ff3b3b;
+    text-decoration:underline;
+}

@@ -103,7 +103,7 @@ nav a:hover{
 
 .hero-content h1{
     font-size:80px;
-    margin:20px 0;
+    margin:70px 0;
     font-weight:800;
 }
 
@@ -151,6 +151,7 @@ nav a:hover{
     text-decoration: none;
     display: inline-block;
     text-align: center;
+    margin-bottom: 70px;
 }
 
 .hero-image img{
